@@ -3,3 +3,9 @@ CREATE TASK mytask_hour
   SCHEDULE = 'USING CRON 0 9-17 * * SUN America/Los_Angeles'
   AS
     SELECT CURRENT_TIMESTAMP;
+
+CREATE TASK mytask_hour2
+  WAREHOUSE = COMPUTE_WH
+  SCHEDULE = 'USING CRON 0 9-17 * * SUN America/Los_Angeles'
+  AS
+    SELECT CURRENT_TIMESTAMP;
